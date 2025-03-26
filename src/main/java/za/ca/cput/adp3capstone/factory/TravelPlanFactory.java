@@ -23,6 +23,6 @@ public class TravelPlanFactory{
                 .setCurrencyExchangeRate(currencyExchangeRate)
                 .setEmergencyFund(emergencyFund)
                 .build();
-    }//end of createTravelPlan() method
+    }
 }
 
