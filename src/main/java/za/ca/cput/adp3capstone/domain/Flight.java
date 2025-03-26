@@ -13,6 +13,50 @@ public class Flight {
     private boolean overnight;
     private double price;
 
+    public double getFlightId() {
+        return flightId;
+    }
+
+    public String getDeparture_airport() {
+        return departure_airport;
+    }
+
+    public String getArrival_airport() {
+        return arrival_airport;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public String getAirplane() {
+        return airplane;
+    }
+
+    public String getAirline() {
+        return airline;
+    }
+
+    public String getTravel_class() {
+        return travel_class;
+    }
+
+    public String getFlight_number() {
+        return flight_number;
+    }
+
+    public String getLegroom() {
+        return legroom;
+    }
+
+    public boolean isOvernight() {
+        return overnight;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
     public Flight(Builder builder){
         flightId = builder.flightId;
         departure_airport = builder.departure_airport;
