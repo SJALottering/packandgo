@@ -7,9 +7,9 @@ public class TravelPlanFactory{
     public static TravelPlan createTravelPlan(String destinationCountry, int tripDuration, String accommodationType, double accommodationBudget,
                                               String transportationType, double transportationBudget, double foodBudget,
                                               String iteniraryDayActivity, double currencyExchangeRate, double emergencyFund) {
-        if (Helper.isNullorEmpty(destinationCountry) || Helper.isNull(tripDuration) || Helper.isNullorEmpty(accommodationType) || Helper.isNull2(accommodationBudget)
-                || Helper.isNullorEmpty(transportationType) || Helper.isNull2(transportationBudget) || Helper.isNull2(foodBudget) || Helper.isNullorEmpty(iteniraryDayActivity)
-                || Helper.isNull2(currencyExchangeRate) || Helper.isNull2(emergencyFund))
+        if (Helper.isStringNullOrEmpty(destinationCountry) || Helper.isIntNull(tripDuration) || Helper.isStringNullOrEmpty(accommodationType) || Helper.isDoubleNull(accommodationBudget)
+                || Helper.isStringNullOrEmpty(transportationType) || Helper.isDoubleNull(transportationBudget) || Helper.isDoubleNull(foodBudget) || Helper.isStringNullOrEmpty(iteniraryDayActivity)
+                || Helper.isDoubleNull(currencyExchangeRate) || Helper.isDoubleNull(emergencyFund))
             return null;
 
         return new TravelPlan.Builder().setDestinationCountry(destinationCountry)
@@ -23,6 +23,6 @@ public class TravelPlanFactory{
                 .setCurrencyExchangeRate(currencyExchangeRate)
                 .setEmergencyFund(emergencyFund)
                 .build();
-    }//end of createTravelPlan() method
+    }
 }
 
