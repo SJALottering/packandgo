@@ -1,8 +1,7 @@
 package za.ca.cput.adp3capstone.domain;
 
-import java.util.List;
-
 public class Flight {
+    private double flightId;
     private String departure_airport;
     private String arrival_airport;
     private int duration;
@@ -15,6 +14,7 @@ public class Flight {
     private double price;
 
     public Flight(Builder builder){
+        flightId = builder.flightId;
         departure_airport = builder.departure_airport;
         arrival_airport = builder.arrival_airport;
         duration = builder.duration;
@@ -28,6 +28,7 @@ public class Flight {
     }
 
     public static class Builder{
+        private double flightId;
         private String departure_airport;
         private String arrival_airport;
         private int duration;
@@ -38,6 +39,11 @@ public class Flight {
         private String legroom;
         private boolean overnight;
         private double price;
+
+        public Builder setFlightId(double  flightId) {
+            this.flightId = flightId;
+            return this;
+        }
 
         public Builder setDeparture_airport(String departure_airport) {
             this.departure_airport = departure_airport;
