@@ -10,7 +10,7 @@ import java.util.List;
 public class ItineraryFactory {
     public static Itinerary createItinerary(String itineraryId, String travelPlanId, int day,
                                             LocalDate date, String activities) {
-        if(Helper.isNullorEmpty(itineraryId) || Helper.isNullorEmpty(travelPlanId))
+        if(Helper.isStringNullOrEmpty(itineraryId) || Helper.isStringNullOrEmpty(travelPlanId))
 
         if (day <= 0)
             return null;
