@@ -11,7 +11,6 @@ public class Flight {
     private String travel_class;
     private String flight_number;
     private String legroom;
-    private List<String> extensions;
     private boolean overnight;
     private double price;
 
@@ -20,9 +19,10 @@ public class Flight {
         arrival_airport = builder.arrival_airport;
         duration = builder.duration;
         airplane = builder.airplane;
+        airline = builder.airline;
+        legroom = builder.legroom;
         travel_class = builder.travel_class;
         flight_number = builder.flight_number;
-        extensions = builder.extensions;
         overnight = builder.overnight;
         price = builder.price;
     }
@@ -36,47 +36,57 @@ public class Flight {
         private String travel_class;
         private String flight_number;
         private String legroom;
-        private List<String> extensions;
         private boolean overnight;
         private double price;
 
-        public void setDeparture_airport(String departure_airport) {
+        public Builder setDeparture_airport(String departure_airport) {
             this.departure_airport = departure_airport;
+            return this;
         }
 
-        public void setArrival_airport(String arrival_airport) {
+        public Builder setArrival_airport(String arrival_airport) {
             this.arrival_airport = arrival_airport;
+            return this;
         }
 
-        public void setDuration(int duration) {
+        public Builder setDuration(int duration) {
             this.duration = duration;
+            return this;
         }
 
-        public void setAirplane(String airplane) {
+        public Builder setAirline(String airline){
+            this.airline = airline;
+            return this;
+        }
+
+        public Builder setAirplane(String airplane) {
             this.airplane = airplane;
+            return this;
         }
-        public void setTravel_class(String travel_class) {
+
+        public Builder setTravel_class(String travel_class) {
             this.travel_class = travel_class;
+            return this;
         }
 
-        public void setFlight_number(String flight_number) {
+        public Builder setFlight_number(String flight_number) {
             this.flight_number = flight_number;
+            return this;
         }
 
-        public void setLegroom(String legroom) {
+        public Builder setLegroom(String legroom) {
             this.legroom = legroom;
+            return this;
         }
 
-        public void setExtensions(List<String> extensions) {
-            this.extensions = extensions;
-        }
-
-        public void setOvernight(boolean overnight) {
+        public Builder setOvernight(boolean overnight) {
             this.overnight = overnight;
+            return this;
         }
 
-        public void setPrice(double price) {
+        public Builder setPrice(double price) {
             this.price = price;
+            return this;
         }
 
         public Flight build(){
