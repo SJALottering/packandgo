@@ -3,6 +3,7 @@ package za.ca.cput.adp3capstone.domain;
 //Add name
 
 public class TravelPlan {
+    private String travelPlanId;
     private String destinationCountry;
     private int tripDuration;
     private String accommodationType;
@@ -17,6 +18,7 @@ public class TravelPlan {
     private TravelPlan(){}
 
     private TravelPlan(Builder builder){
+        this.travelPlanId = builder.travelPlanId;
         this.destinationCountry = builder.destinationCountry;
         this.tripDuration = builder.tripDuration;
         this.accommodationType = builder.accommodationType;
@@ -29,6 +31,7 @@ public class TravelPlan {
         this.emergencyFund = builder.emergencyFund;
     }
 
+    public String getTravelPlanId() {return travelPlanId;}
 
     public String getDestinationCountry() {
         return destinationCountry;
@@ -71,6 +74,7 @@ public class TravelPlan {
     }
 
     public static class Builder{
+        private String travelPlanId;
         private String destinationCountry;
         private int tripDuration;
         private String accommodationType;
@@ -81,6 +85,11 @@ public class TravelPlan {
         private String iteniraryDayActivity;
         private double currencyExchangeRate;
         private double emergencyFund;
+
+        public Builder setTravelPlanId(String travelPlanId) {
+            this.travelPlanId = travelPlanId;
+            return this;
+        }
 
         public Builder setDestinationCountry(String destinationCountry) {
             this.destinationCountry = destinationCountry;
@@ -133,6 +142,7 @@ public class TravelPlan {
         }
 
         public Builder copy(TravelPlan travelPlan){
+            this.travelPlanId = travelPlan.travelPlanId;
             this.destinationCountry = travelPlan.destinationCountry;
             this.tripDuration = travelPlan.tripDuration;
             this.accommodationType = travelPlan.accommodationType;
