@@ -27,9 +27,10 @@ public class FlightRepository implements IFlightRepository{
     }
 
     @Override
-    public Flight update(Double flightId) {
+    public Flight update(Double flightId, Flight newFlight) {
         Flight flight = flights.get(flightId);
-        Flight updatedFlight = null;
+
+        Flight updatedFlight = newFlight;
 
         flights.put(flightId, updatedFlight);
         return null;
