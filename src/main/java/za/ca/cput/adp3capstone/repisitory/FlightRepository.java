@@ -8,18 +8,17 @@ import java.util.HashMap;
 
 public class FlightRepository implements IFlightRepository{
     private HashMap<Double, Flight> flights;
-    private static IFlightRepository repository;
+    private static IFlightRepository repository = null;
 
-    public FlightRepository() throws IOException {
+    private FlightRepository() {
         flights = new HashMap<>();
-        repository = getRepository();
     }
 
-    private static IFlightRepository getRepository() throws IOException {
+    public static IFlightRepository getRepository() {
         if(repository == null) {
             repository = new FlightRepository();
         }
-        return new FlightRepository();
+        return repository;
     }
 
     @Override
