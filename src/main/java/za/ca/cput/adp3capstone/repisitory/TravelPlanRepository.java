@@ -4,7 +4,7 @@ package za.ca.cput.adp3capstone.repisitory;
 import za.ca.cput.adp3capstone.domain.TravelPlan;
 import za.ca.cput.adp3capstone.factory.TravelPlanFactory;
 
-import java.io.IOException;
+//import java.io.IOException;
 import java.util.HashMap;
 
 
@@ -12,15 +12,15 @@ public class TravelPlanRepository implements ITravelPlanRepository{
 
     private TravelPlanFactory travelPlanFactory;
     public static ITravelPlanRepository repository = null;
-    private HashMap<TravelPlan, String> travelPlanHashMap;
+    private HashMap<String ,TravelPlan> travelPlanHashMap;
 
-    private TravelPlanRepository() throws IOException{
-        travelPlanHashMap = new HashMap<TravelPlan, String>();
-        repository = getRepository();
-        travelPlanFactory = new TravelPlanFactory();
-    }
+//    private TravelPlanRepository() throws IOException{
+//        travelPlanHashMap = new HashMap<TravelPlan, String>();
+//        repository = getRepository();
+//        travelPlanFactory = new TravelPlanFactory();
+//    }
 
-    private static ITravelPlanRepository getRepository() throws IOException{
+    private static ITravelPlanRepository getRepository(){
         if(repository == null) {
             repository = new TravelPlanRepository();
         }
@@ -34,30 +34,31 @@ public class TravelPlanRepository implements ITravelPlanRepository{
 
     @Override
     public TravelPlan create(TravelPlan travelPlan) {
-        TravelPlan newTravelPlan = travelPlanFactory.createTravelPlan(
-                travelPlan.getTravelPlanId()
-                ,travelPlan.getDestinationCountry()
-                ,travelPlan.getTripDuration()
-                ,travelPlan.getAccommodationType()
-                ,travelPlan.getAccommodationBudget()
-                ,travelPlan.getTransportationType()
-                ,travelPlan.getTransportationBudget()
-                ,travelPlan.getFoodBudget()
-                ,travelPlan.getIteniraryDayActivity()
-                ,travelPlan.getCurrencyExchangeRate()
-                ,travelPlan.getEmergencyFund()
-        );
+        if(travelPlan == null){
+        return null;
+        }
+        travelPlanHashMap.put(travelPlan.getTravelPlanId(), travelPlan);
+        return travelPlan;
+    }
+
+    @Override
+    public TravelPlan update(String travelPlanId, TravelPlan newTravelPlanId) {
+        TravelPlan travelPlan = travelPlanHashMap.get(travelPlanId);
+
+        TravelPlan updatedTravelPlan = newTravelPlanId;
+
+        travelPlanHashMap.put(travelPlanId, updatedTravelPlan);
         return null;
     }
 
     @Override
-    public TravelPlan update(String s) {
-        return null;
-    }
-
-    @Override
-    public boolean delete(String s) {
-        return false;
+    public boolean delete(String travelPlanId) {
+        TravelPlan travelPlan = travelPlanHashMap.get(travelPlanId);
+        if(travelPlan == null){
+            return false;
+        }
+        travelPlanHashMap.remove(travelPlanId);
+        return true;
     }
 
     @Override
@@ -65,3 +66,4 @@ public class TravelPlanRepository implements ITravelPlanRepository{
         return null;
     }
 }
+

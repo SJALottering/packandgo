@@ -3,6 +3,8 @@ package za.ca.cput.adp3capstone.domain;
 import java.time.LocalDate;
 import java.util.List;
 
+
+
 public class Itinerary {
     private String itineraryId;
     private String travelPlanId;
