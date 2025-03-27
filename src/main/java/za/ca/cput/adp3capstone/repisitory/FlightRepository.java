@@ -1,11 +1,26 @@
 package za.ca.cput.adp3capstone.repisitory;
 
 import za.ca.cput.adp3capstone.domain.Flight;
+import za.ca.cput.adp3capstone.factory.FlightFactory;
 
+import java.io.IOException;
 import java.util.HashMap;
 
 public class FlightRepository implements IFlightRepository{
-    private HashMap<Double, Flight> flights = new HashMap<>();
+    private HashMap<Double, Flight> flights;
+    private static IFlightRepository repository;
+
+    public FlightRepository() throws IOException {
+        flights = new HashMap<>();
+        repository = getRepository();
+    }
+
+    private static IFlightRepository getRepository() throws IOException {
+        if(repository == null) {
+            repository = new FlightRepository();
+        }
+        return new FlightRepository();
+    }
 
     @Override
     public HashMap<Double, Flight> getAll() {
