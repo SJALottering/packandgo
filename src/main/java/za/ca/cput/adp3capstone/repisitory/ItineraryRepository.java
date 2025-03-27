@@ -45,8 +45,7 @@ public class ItineraryRepository implements IItineraryRepository {
     }
 
     @Override
-    public Itinerary update(String id) {
-        Itinerary itinerary = get(id);
+    public Itinerary update(String id, Itinerary itinerary) {
         if (itinerary != null) {
             itineraryHashMap.put(id, itinerary);
             return itinerary;
