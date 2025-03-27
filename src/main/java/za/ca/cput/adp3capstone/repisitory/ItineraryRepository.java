@@ -33,15 +33,11 @@ public class ItineraryRepository implements IItineraryRepository {
 
     @Override
     public Itinerary create(Itinerary itinerary) {
-        Itinerary newItinerary = itineraryFactory.createItinerary(
-                itinerary.getItineraryId(),
-                itinerary.getTravelPlanId(),
-                itinerary.getDay(),
-                itinerary.getDate(),
-                itinerary.getActivities()
-        );
-        itineraryHashMap.put(newItinerary.getItineraryId(), newItinerary);
-        return newItinerary;
+        if(itinerary ==null){
+            return null;
+        }
+        itineraryHashMap.put(itinerary.getItineraryId(),itinerary);
+        return itinerary;
     }
 
     @Override
