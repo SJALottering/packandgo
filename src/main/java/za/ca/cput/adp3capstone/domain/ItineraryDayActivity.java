@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class ItineraryDayActivity {
     private int activityId;
-    private int itenartDayId;
+    private int itineraryDayId;
     private String activityName;
     private String activityDescription;
     private LocalTime startTime;
@@ -14,7 +14,7 @@ public class ItineraryDayActivity {
 
     public ItineraryDayActivity(Builder builder) {
         this.activityId = builder.activityId;
-        this.itenartDayId = builder.itenartDayId;
+        this.itineraryDayId = builder.itineraryDayId;
         this.activityName = builder.activityName;
         this.activityDescription = builder.activityDescription;
         this.startTime = builder.startTime;
@@ -28,8 +28,8 @@ public class ItineraryDayActivity {
         return activityId;
     }
 
-    public int getItenartDayId() {
-        return itenartDayId;
+    public int getitineraryDayId() {
+        return itineraryDayId;
     }
 
     public String getActivityName() {
@@ -56,19 +56,19 @@ public class ItineraryDayActivity {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         ItineraryDayActivity that = (ItineraryDayActivity) o;
-        return activityId == that.activityId && itenartDayId == that.itenartDayId && Double.compare(costPrice, that.costPrice) == 0 && Objects.equals(activityName, that.activityName) && Objects.equals(activityDescription, that.activityDescription) && Objects.equals(startTime, that.startTime) && Objects.equals(endTime, that.endTime);
+        return activityId == that.activityId && itineraryDayId == that.itineraryDayId && Double.compare(costPrice, that.costPrice) == 0 && Objects.equals(activityName, that.activityName) && Objects.equals(activityDescription, that.activityDescription) && Objects.equals(startTime, that.startTime) && Objects.equals(endTime, that.endTime);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(activityId, itenartDayId, activityName, activityDescription, startTime, endTime, costPrice);
+        return Objects.hash(activityId, itineraryDayId, activityName, activityDescription, startTime, endTime, costPrice);
     }
 
     @Override
     public String toString() {
         return "ItineraryDayActivity{" +
                 "activityId=" + activityId +
-                ", itenartDayId=" + itenartDayId +
+                ", ItineraryDayId=" + itineraryDayId +
                 ", activityName='" + activityName + '\'' +
                 ", activityDescription='" + activityDescription + '\'' +
                 ", startTime=" + startTime +
@@ -79,7 +79,7 @@ public class ItineraryDayActivity {
 
     public static class Builder {
         private int activityId;
-        private int itenartDayId;
+        private int itineraryDayId;
         private String activityName;
         private String activityDescription;
         private LocalTime startTime;
@@ -92,8 +92,8 @@ public class ItineraryDayActivity {
             return this;
         }
 
-        public Builder setItenartDayId(int itenartDayId) {
-            this.itenartDayId = itenartDayId;
+        public Builder setItineraryDayId(int ItineraryDayId) {
+            this.itineraryDayId = ItineraryDayId;
             return this;
         }
 
