@@ -1,4 +1,4 @@
-package za.ca.cput.adp3capstone.repisitory;
+package za.ca.cput.adp3capstone.repository;
 /* TravelPlan.java
 TravelPLan Repository test class
 Author: Brezano Liebenberg (230463886)
