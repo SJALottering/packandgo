@@ -27,7 +27,7 @@ public class FlightRepository implements IFlightRepository{
     }
 
     @Override
-    public Flight get(int flightId) {
+    public Flight get(Integer flightId) {
         return flights.get(flightId);
     }
 
@@ -41,17 +41,19 @@ public class FlightRepository implements IFlightRepository{
     }
 
     @Override
-    public Flight update(int flightId, Flight newFlight) {
+    public Flight update(Integer flightId, Flight newFlight) {
         Flight flight = flights.get(flightId);
 
         Flight updatedFlight = newFlight;
-
-        flights.put(flightId, updatedFlight);
-        return null;
+        if(updatedFlight==null){
+            flights.put(flightId, updatedFlight);
+            return null;
+        }
+        return updatedFlight;
     }
 
     @Override
-    public boolean delete(int flightId) {
+    public boolean delete(Integer flightId) {
         Flight flight = flights.get(flightId);
         if(flight==null){
             return false;
