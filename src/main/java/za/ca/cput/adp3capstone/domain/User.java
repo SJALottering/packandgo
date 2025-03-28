@@ -1,7 +1,7 @@
 package za.ca.cput.adp3capstone.domain;
 
 // za.ca.cput.adp3capstone.domain.User Entity using Builder Pattern
-public class User{
+public class User {
     private final String id;
     private final String name;
     private final String email;
@@ -12,6 +12,22 @@ public class User{
         this.name = builder.name;
         this.email = builder.email;
         this.phoneNumber = builder.phoneNumber;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
     public static class Builder {
@@ -44,10 +60,6 @@ public class User{
             return new User(this);
         }
     }
-
-    // Getters
-    public String getId() { return id; }
-    public String getName() { return name; }
-    public String getEmail() { return email; }
-    public String getPhoneNumber() { return phoneNumber; }
 }
+
+
