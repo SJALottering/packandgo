@@ -1,5 +1,11 @@
 package za.ca.cput.adp3capstone.repisitory;
 
+/* Employee.java
+Flight Repository class
+Author: Ethan Le Roux (222622172)
+Date:28 March 2025
+*/
+
 import za.ca.cput.adp3capstone.domain.Flight;
 import za.ca.cput.adp3capstone.factory.FlightFactory;
 

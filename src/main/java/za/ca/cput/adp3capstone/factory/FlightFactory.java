@@ -1,5 +1,11 @@
 package za.ca.cput.adp3capstone.factory;
 
+/* Employee.java
+Flight Factory class
+Author: Ethan Le Roux (222622172)
+Date:28 March 2025
+*/
+
 import za.ca.cput.adp3capstone.domain.Flight;
 import za.ca.cput.adp3capstone.util.Helper;
 
