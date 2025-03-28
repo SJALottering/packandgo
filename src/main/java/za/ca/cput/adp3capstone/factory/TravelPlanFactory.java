@@ -1,9 +1,12 @@
 package za.ca.cput.adp3capstone.factory;
+/* TravelPlan.java
+TravelPLan Factory class
+Author: Brezano Liebenberg (230463886)
+Date: 28 March 2025
+ */
 
 import za.ca.cput.adp3capstone.domain.TravelPlan;
 import za.ca.cput.adp3capstone.util.Helper;
-
-
 
 public class TravelPlanFactory{
     public static TravelPlan createTravelPlan(String travelPlanId,String destinationCountry, int tripDuration, String accommodationType, double accommodationBudget,

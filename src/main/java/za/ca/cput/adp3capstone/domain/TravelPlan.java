@@ -1,6 +1,9 @@
 package za.ca.cput.adp3capstone.domain;
-
-//Add name
+/* TravelPlan.java
+TravelPLan domain class
+Author: Brezano Liebenberg (230463886)
+Date: 28 March 2025
+ */
 
 public class TravelPlan {
     private String travelPlanId;

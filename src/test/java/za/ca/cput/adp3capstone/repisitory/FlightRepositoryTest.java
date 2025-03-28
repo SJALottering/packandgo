@@ -35,7 +35,6 @@ public class FlightRepositoryTest {
         Flight testFlight = repository.get(12345);
         assertNotNull(testFlight);
     }
-
     @Test
     void testCreateFlight() {
         Flight createdFlight = repository.create(flight1);
