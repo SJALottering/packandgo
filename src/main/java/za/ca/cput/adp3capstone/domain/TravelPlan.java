@@ -15,8 +15,8 @@ public class TravelPlan {
     private double transportationBudget;
     private double foodBudget;
     private String iteniraryDayActivity;
-    private double currencyExchangeRate;
     private double emergencyFund;
+    private double total;
 
     private TravelPlan(){}
 
@@ -30,8 +30,8 @@ public class TravelPlan {
         this.transportationBudget = builder.transportationBudget;
         this.foodBudget = builder.foodBudget;
         this.iteniraryDayActivity = builder.iteniraryDayActivity;
-        this.currencyExchangeRate = builder.currencyExchangeRate;
         this.emergencyFund = builder.emergencyFund;
+        this.total = builder.total;
     }
 
     public String getTravelPlanId() {return travelPlanId;}
@@ -68,12 +68,12 @@ public class TravelPlan {
         return iteniraryDayActivity;
     }
 
-    public double getCurrencyExchangeRate() {
-        return currencyExchangeRate;
-    }
-
     public double getEmergencyFund() {
         return emergencyFund;
+    }
+
+    public double getTotal() {
+        return total;
     }
 
     public static class Builder{
@@ -86,8 +86,8 @@ public class TravelPlan {
         private double transportationBudget;
         private double foodBudget;
         private String iteniraryDayActivity;
-        private double currencyExchangeRate;
         private double emergencyFund;
+        private double total;
 
         public Builder setTravelPlanId(String travelPlanId) {
             this.travelPlanId = travelPlanId;
@@ -134,13 +134,13 @@ public class TravelPlan {
             return this;
         }
 
-        public Builder setCurrencyExchangeRate(double currencyExchangeRate) {
-            this.currencyExchangeRate = currencyExchangeRate;
+        public Builder setEmergencyFund(double emergencyFund) {
+            this.emergencyFund = emergencyFund;
             return this;
         }
 
-        public Builder setEmergencyFund(double emergencyFund) {
-            this.emergencyFund = emergencyFund;
+        public Builder setTotal(double total) {
+            this.total = total;
             return this;
         }
 
@@ -154,8 +154,8 @@ public class TravelPlan {
             this.transportationBudget = travelPlan.transportationBudget;
             this.foodBudget = travelPlan.foodBudget;
             this.iteniraryDayActivity = travelPlan.iteniraryDayActivity;
-            this.currencyExchangeRate = travelPlan.currencyExchangeRate;
             this.emergencyFund = travelPlan.emergencyFund;
+            this.total = travelPlan.total;
             return this;
         }
 
