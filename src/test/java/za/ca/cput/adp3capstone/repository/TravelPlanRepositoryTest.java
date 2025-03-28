@@ -20,10 +20,10 @@ class TravelPlanRepositoryTest {
 
     private TravelPlan travelPlan1 = TravelPlanFactory.createTravelPlan("Package 1","Italy", 14, "Hotel",
             30000.00, "public transport", 4500.00,
-            5500.00, "combo 2", 0.05, 1000.00);
+            5500.00, "combo 2", 1000.00, 43000.00);
     TravelPlan travelPlan2 = TravelPlanFactory.createTravelPlan("Package 2","Italy", 21, "agriturismos (farm stays)",
             25000.00, "Car rental", 8000.00,
-            12700.00, "combo 3", 0.05, 1000.00);
+            12700.00, "combo 3", 1000.00, 46700.00);
 
 
     @Test
@@ -41,10 +41,10 @@ class TravelPlanRepositoryTest {
     void updateTravelPlan() {
         TravelPlan travelPlanToUpdate = TravelPlanFactory.createTravelPlan("Package 2","Italy", 21, "agriturismos (farm stays)",
                 25000.00, "Car rental", 8000.00,
-                14700.00, "combo 3", 0.05, 1000.00);
+                14700.00, "combo 3", 1000.00, 43000.00);
         TravelPlan travelPlanWithUpdatedDetails = TravelPlanFactory.createTravelPlan("Package 2","Italy", 21, "Hotel",
                 32000.00, "public transport", 5500.00,
-                7500.00, "combo 3", 0.05, 1000.00);
+                7500.00, "combo 3",  1000.00, 46700.00);
 
 
         TravelPlan updatedTravelPlan = repository.update(travelPlanToUpdate.getTravelPlanId(),travelPlanWithUpdatedDetails);
