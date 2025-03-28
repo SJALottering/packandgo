@@ -6,8 +6,8 @@ Date:28 March 2025
 */
 import org.junit.jupiter.api.Test;
 import za.ca.cput.adp3capstone.domain.Flight;
-import za.ca.cput.adp3capstone.repisitory.FlightRepository;
-import za.ca.cput.adp3capstone.repisitory.IFlightRepository;
+import za.ca.cput.adp3capstone.repository.FlightRepository;
+import za.ca.cput.adp3capstone.repository.IFlightRepository;
 
 import static org.junit.jupiter.api.Assertions.*;
 

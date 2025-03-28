@@ -1,4 +1,4 @@
-package za.ca.cput.adp3capstone.repisitory;
+package za.ca.cput.adp3capstone.repository;
 /* ItineraryDayActivityRepositoryTest.java
 Author: Luyanda Mbalenhle Makhanya (222788291)
 Date: 28 March 2025

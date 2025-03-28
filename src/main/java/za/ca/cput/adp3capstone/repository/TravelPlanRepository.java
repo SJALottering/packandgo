@@ -47,10 +47,11 @@ public class TravelPlanRepository implements ITravelPlanRepository{
     @Override
     public TravelPlan update(String travelPlanId, TravelPlan newTravelPlanId) {
         TravelPlan travelPlan = travelPlanHashMap.get(travelPlanId);
-
         TravelPlan updatedTravelPlan = newTravelPlanId;
-
-        travelPlanHashMap.put(travelPlanId, updatedTravelPlan);
+        if(updatedTravelPlan!=null){
+            travelPlanHashMap.put(travelPlanId, updatedTravelPlan);
+            return updatedTravelPlan;
+        }
         return null;
     }
 
@@ -66,6 +67,9 @@ public class TravelPlanRepository implements ITravelPlanRepository{
 
     @Override
     public HashMap<String, TravelPlan> getAll(){
+        if(travelPlanHashMap!=null){
+            return travelPlanHashMap;
+        }
         return null;
     }
 }

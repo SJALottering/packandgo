@@ -8,10 +8,10 @@ import za.ca.cput.adp3capstone.util.Helper;
 public class TravelPlanFactory{
     public static TravelPlan createTravelPlan(String travelPlanId,String destinationCountry, int tripDuration, String accommodationType, double accommodationBudget,
                                               String transportationType, double transportationBudget, double foodBudget,
-                                              String iteniraryDayActivity, double currencyExchangeRate, double emergencyFund) {
+                                              String iteniraryDayActivity, double emergencyFund, double total) {
         if (Helper.isStringNullOrEmpty(destinationCountry) || Helper.isIntNull(tripDuration) || Helper.isStringNullOrEmpty(accommodationType) || Helper.isDoubleNull(accommodationBudget)
                 || Helper.isStringNullOrEmpty(transportationType) || Helper.isDoubleNull(transportationBudget) || Helper.isDoubleNull(foodBudget) || Helper.isStringNullOrEmpty(iteniraryDayActivity)
-                || Helper.isDoubleNull(currencyExchangeRate) || Helper.isDoubleNull(emergencyFund))
+                || Helper.isDoubleNull(emergencyFund) || Helper.isDoubleNull(total))
             return null;
 
         return new TravelPlan.Builder().setTravelPlanId(travelPlanId)
@@ -23,8 +23,8 @@ public class TravelPlanFactory{
                 .setTransportationBudget(transportationBudget)
                 .setFoodBudget(foodBudget)
                 .setIteniraryDayActivity(iteniraryDayActivity)
-                .setCurrencyExchangeRate(currencyExchangeRate)
                 .setEmergencyFund(emergencyFund)
+                .setTotal(total)
                 .build();
     }
 }
