@@ -6,21 +6,20 @@ Date: 28 March 2025
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import za.ca.cput.adp3capstone.domain.ItineraryDay;
-import za.ca.cput.adp3capstone.domain.ItineraryDayActivity;
 import za.ca.cput.adp3capstone.factory.ItineraryDayFactory;
 
 import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ItineraryDayResitoryTest {
-    private ItineraryDayResitory repository;
+class ItineraryDayRepositoryTest {
+    private ItineraryDayRepository repository;
     private ItineraryDay itineraryDay1, itineraryDay2;
 
 
     @BeforeEach
     void setUp() {
-        repository = ItineraryDayResitory.getRepo();
+        repository = ItineraryDayRepository.getRepo();
         itineraryDay1 = ItineraryDayFactory.createItineraryDay(1, "Day 1",
                 "Visit Cape Point", LocalDate.now(), 500.0);
 

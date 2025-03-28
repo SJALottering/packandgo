@@ -1,4 +1,9 @@
 package za.ca.cput.adp3capstone.util;
+/* TravelPlan.java
+TravelPLan Util Helper class
+Author: Brezano Liebenberg (230463886)
+Date: 28 March 2025
+ */
 
 public class Helper {
     public static boolean isStringNullOrEmpty(String x){

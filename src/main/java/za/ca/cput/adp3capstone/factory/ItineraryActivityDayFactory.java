@@ -6,10 +6,9 @@ Date: 28 March 2025
 import za.ca.cput.adp3capstone.domain.ItineraryDayActivity;
 import za.ca.cput.adp3capstone.util.Helper;
 
-import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class ItineraryActivityFactory {
+public class ItineraryActivityDayFactory {
     public static ItineraryDayActivity createItineraryDayActivity(int activityDayId, int itineraryDayId, String activityName,
                                                                   String activityDescription, LocalTime startTime,
                                                                   LocalTime endTime, double costPrice) {

@@ -1,5 +1,11 @@
 package za.ca.cput.adp3capstone.factory;
 
+/* Itinerary.java
+Itinerary Factory class
+Author: Seja Kgomokaboya (222152672)
+Date:28 March 2025
+*/
+
 import za.ca.cput.adp3capstone.domain.Itinerary;
 //import za.ca.cput.adp3capstone.domain.Activity;
 import za.ca.cput.adp3capstone.util.Helper;

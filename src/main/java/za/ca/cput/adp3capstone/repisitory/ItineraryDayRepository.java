@@ -7,16 +7,16 @@ import za.ca.cput.adp3capstone.domain.ItineraryDay;
 
 import java.util.HashMap;
 
-public class ItineraryDayResitory implements I_ItineraryDayRepository{
-    private static ItineraryDayResitory repository=null;
+public class ItineraryDayRepository implements IItineraryDayRepository {
+    private static ItineraryDayRepository repository=null;
     private HashMap<Integer, ItineraryDay> itineraryDays;
 
-    private ItineraryDayResitory(){
+    private ItineraryDayRepository(){
         itineraryDays = new HashMap<>();
     }
-    public static ItineraryDayResitory getRepo(){
+    public static ItineraryDayRepository getRepo(){
         if(repository==null){
-            repository=new ItineraryDayResitory();
+            repository=new ItineraryDayRepository();
         }
         return repository;
     }

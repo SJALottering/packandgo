@@ -1,7 +1,15 @@
 package za.ca.cput.adp3capstone.domain;
 
+/* Itinerary.java
+Itinerary Domain class
+Author: Seja Kgomokaboya (222152672)
+Date:28 March 2025
+*/
+
 import java.time.LocalDate;
 import java.util.List;
+
+
 
 public class Itinerary {
     private String itineraryId;
