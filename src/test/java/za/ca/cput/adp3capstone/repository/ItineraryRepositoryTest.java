@@ -1,5 +1,11 @@
 package za.ca.cput.adp3capstone.repository;
 
+/* Itinerary.java
+Itinerary Repository Test class
+Author: Seja Kgomokaboya (222152672)
+Date:28 March 2025
+*/
+
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.MethodOrderer;
