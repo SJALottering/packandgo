@@ -1,5 +1,6 @@
 # Group Members
 Ethan Le Roux 222622172 (Team Leader)
+Sibahle Josline Anita Lottering 222141395 (Group Member) https://github.com/SJALottering
 
 
 
