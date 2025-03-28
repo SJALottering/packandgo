@@ -6,7 +6,7 @@ import za.ca.cput.adp3capstone.util.Helper;
 public class FlightFactory {
     private Helper helper =new Helper();
 
-    public static Flight createFlight(double flightId, String departureAirport, String arrivalAirport, int duration,
+    public static Flight createFlight(int flightId, String departureAirport, String arrivalAirport, int duration,
                                       String airplane, String airline, String travelClass,
                                       String flightNumber, String legroom,
                                       boolean overnight, double price){

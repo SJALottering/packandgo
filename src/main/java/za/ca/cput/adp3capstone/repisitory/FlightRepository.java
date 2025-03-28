@@ -7,11 +7,11 @@ import java.io.IOException;
 import java.util.HashMap;
 
 public class FlightRepository implements IFlightRepository{
-    private HashMap<Double, Flight> flights;
+    private HashMap<Integer, Flight> flights;
     private static IFlightRepository repository = null;
 
     private FlightRepository() {
-        flights = new HashMap<>();
+        flights = new HashMap<Integer, Flight>();
     }
 
     public static IFlightRepository getRepository() {
@@ -22,12 +22,12 @@ public class FlightRepository implements IFlightRepository{
     }
 
     @Override
-    public HashMap<Double, Flight> getAll() {
+    public HashMap<Integer, Flight> getAll() {
         return flights;
     }
 
     @Override
-    public Flight get(Double flightId) {
+    public Flight get(int flightId) {
         return flights.get(flightId);
     }
 
@@ -41,7 +41,7 @@ public class FlightRepository implements IFlightRepository{
     }
 
     @Override
-    public Flight update(Double flightId, Flight newFlight) {
+    public Flight update(int flightId, Flight newFlight) {
         Flight flight = flights.get(flightId);
 
         Flight updatedFlight = newFlight;
@@ -51,7 +51,7 @@ public class FlightRepository implements IFlightRepository{
     }
 
     @Override
-    public boolean delete(Double flightId) {
+    public boolean delete(int flightId) {
         Flight flight = flights.get(flightId);
         if(flight==null){
             return false;

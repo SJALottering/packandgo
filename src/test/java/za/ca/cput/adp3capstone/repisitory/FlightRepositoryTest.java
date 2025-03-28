@@ -22,13 +22,13 @@ public class FlightRepositoryTest {
 
     @Test
     void testGetAllFlight() {
-        HashMap<Double, Flight> flights = repository.getAll();
+        HashMap<Integer, Flight> flights = repository.getAll();
         assertNotNull(flights);
     }
 
     @Test
     void testGetFlight() {
-        Flight testFlight = repository.get(12345.0);
+        Flight testFlight = repository.get(12345);
         assertNotNull(testFlight);
     }
 
@@ -51,7 +51,7 @@ public class FlightRepositoryTest {
 
     @Test
     void testDeleteFlight() {
-        HashMap<Double, Flight> flights = new HashMap<>();
+        HashMap<Integer, Flight> flights = new HashMap<>();
         flights.put(flight1.getFlightId(),flight1);
         flights.put(flight2.getFlightId(),flight2);
         flights.put(flight3.getFlightId(),flight3);
@@ -60,7 +60,7 @@ public class FlightRepositoryTest {
         repository.create(flight2);
         repository.create(flight3);
 
-        boolean isFlightDeleted = repository.delete(54321.0);
+        boolean isFlightDeleted = repository.delete(54321);
         assertTrue(isFlightDeleted);
     }
 }
