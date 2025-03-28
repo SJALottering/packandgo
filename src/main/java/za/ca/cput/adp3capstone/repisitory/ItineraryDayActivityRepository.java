@@ -7,7 +7,7 @@ import za.ca.cput.adp3capstone.domain.ItineraryDayActivity;
 
 import java.util.HashMap;
 
-public class ItineraryDayActivityRepository implements I_ItineraryDayActivity{
+public class ItineraryDayActivityRepository implements IItineraryDayActivityRepository {
       private static ItineraryDayActivityRepository repository= null;
       private HashMap<Integer, ItineraryDayActivity> activities;
 
@@ -42,7 +42,6 @@ public class ItineraryDayActivityRepository implements I_ItineraryDayActivity{
         }
         activities.put(activityId, new_itineraryDayActivity);
         return new_itineraryDayActivity;
-
     }
 
     @Override

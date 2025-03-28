@@ -7,9 +7,8 @@ Date: 28 March 2025
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import za.ca.cput.adp3capstone.domain.ItineraryDayActivity;
-import za.ca.cput.adp3capstone.factory.ItineraryActivityFactory;
+import za.ca.cput.adp3capstone.factory.ItineraryActivityDayFactory;
 
-import java.time.LocalDate;
 import java.time.LocalTime;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -20,20 +19,19 @@ class ItineraryDayActivityRepositoryTest {
 
     @BeforeEach
     void setUp() {
-        activity1 = ItineraryActivityFactory.createItineraryDayActivity(
+        activity1 = ItineraryActivityDayFactory.createItineraryDayActivity(
                 1, 1, "Hiking", "Hiking Signal Hill",
                 LocalTime.of(12, 0), LocalTime.of(14, 0),
                 100.0
         );
 
-        activity2 = ItineraryActivityFactory.createItineraryDayActivity(
+        activity2 = ItineraryActivityDayFactory.createItineraryDayActivity(
                 2, 1, "City Tour", "Exploring Cape Town City",
                 LocalTime.of(15, 0), LocalTime.of(17, 0),
                 150.0
         );
 
     }
-
 
 
     @Test
@@ -46,7 +44,7 @@ class ItineraryDayActivityRepositoryTest {
     @Test
     void update() {
         repository.create(activity1);
-        ItineraryDayActivity updatedActivity = ItineraryActivityFactory.createItineraryDayActivity(
+        ItineraryDayActivity updatedActivity = ItineraryActivityDayFactory.createItineraryDayActivity(
                 1, 1, "Updated Hiking", "Hiking Signal Hill - Sunset",
                 LocalTime.of(18, 0), LocalTime.of(20, 0),
                 120.0
