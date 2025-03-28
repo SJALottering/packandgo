@@ -4,7 +4,6 @@ import za.ca.cput.adp3capstone.domain.TravelPlan;
 import za.ca.cput.adp3capstone.util.Helper;
 
 
-
 public class TravelPlanFactory{
     public static TravelPlan createTravelPlan(String travelPlanId,String destinationCountry, int tripDuration, String accommodationType, double accommodationBudget,
                                               String transportationType, double transportationBudget, double foodBudget,

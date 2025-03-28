@@ -1,7 +1,13 @@
 package za.ca.cput.adp3capstone.domain;
 
+/* Employee.java
+Flight model class
+Author: Ethan Le Roux (222622172)
+Date:28 March 2025
+*/
+
 public class Flight {
-    private double flightId;
+    private int flightId;
     private String departure_airport;
     private String arrival_airport;
     private int duration;
@@ -13,7 +19,7 @@ public class Flight {
     private boolean overnight;
     private double price;
 
-    public double getFlightId() {
+    public int getFlightId() {
         return flightId;
     }
 
@@ -72,7 +78,7 @@ public class Flight {
     }
 
     public static class Builder{
-        private double flightId;
+        private int flightId;
         private String departure_airport;
         private String arrival_airport;
         private int duration;
@@ -84,7 +90,7 @@ public class Flight {
         private boolean overnight;
         private double price;
 
-        public Builder setFlightId(double  flightId) {
+        public Builder setFlightId(int flightId) {
             this.flightId = flightId;
             return this;
         }
