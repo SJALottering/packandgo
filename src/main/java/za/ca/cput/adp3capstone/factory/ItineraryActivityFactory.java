@@ -1,5 +1,8 @@
 package za.ca.cput.adp3capstone.factory;
-
+/* ItineraryDayActivity Factory Class
+Author: Luyanda Mbalenhle Makhanya (222788291)
+Date: 28 March 2025
+        */
 import za.ca.cput.adp3capstone.domain.ItineraryDayActivity;
 import za.ca.cput.adp3capstone.util.Helper;
 

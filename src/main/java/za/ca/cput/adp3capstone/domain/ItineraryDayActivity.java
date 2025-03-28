@@ -1,5 +1,8 @@
 package za.ca.cput.adp3capstone.domain;
-
+/* ItineraryDayActivity Domain Class
+Author: Luyanda Mbalenhle Makhanya (222788291)
+Date: 28 March 2025
+        */
 import java.time.LocalTime;
 import java.util.Objects;
 
@@ -51,6 +54,8 @@ public class ItineraryDayActivity {
     public double getCostPrice() {
         return costPrice;
     }
+
+
 
     @Override
     public boolean equals(Object o) {
