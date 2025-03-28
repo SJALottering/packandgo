@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import za.ca.cput.adp3capstone.domain.ItineraryDay;
 import za.ca.cput.adp3capstone.factory.ItineraryDayFactory;
+import za.ca.cput.adp3capstone.repository.ItineraryDayRepository;
 
 import java.time.LocalDate;
 
