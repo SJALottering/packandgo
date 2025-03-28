@@ -1,4 +1,4 @@
-package za.ca.cput.adp3capstone.repository;
+package za.ca.cput.adp3capstone.repisitory;
 
 
 import za.ca.cput.adp3capstone.domain.TravelPlan;
