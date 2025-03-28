@@ -1,4 +1,4 @@
-package za.ca.cput.adp3capstone.repisitory;
+package za.ca.cput.adp3capstone.repository;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Disabled;
@@ -8,7 +8,6 @@ import org.junit.jupiter.api.TestMethodOrder;
 import za.ca.cput.adp3capstone.domain.Itinerary;
 import za.ca.cput.adp3capstone.factory.ItineraryFactory;
 
-import java.io.IOException;
 import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.*;
