@@ -1,5 +1,7 @@
 package za.ca.cput.adp3capstone.factory;
-
+//UserFactoryTest class
+//Author: Anita Lottering 222141395
+// Date:28 March 2025
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
