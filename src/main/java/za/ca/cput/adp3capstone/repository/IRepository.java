@@ -1,4 +1,4 @@
-package za.ca.cput.adp3capstone.repisitory;
+package za.ca.cput.adp3capstone.repository;
 
 /* Employee.java
 Repository interface
@@ -11,6 +11,7 @@ public interface IRepository <T, ID> {
     public T create(T t);
     public T update(ID id,T t);
     public boolean delete(ID id);
+
     }
 
 

@@ -1,4 +1,4 @@
-package za.ca.cput.adp3capstone.repisitory;
+package za.ca.cput.adp3capstone.repository;
 
 /* Employee.java
 Flight Repository interface

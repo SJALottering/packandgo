@@ -1,8 +1,7 @@
-package za.ca.cput.adp3capstone.repisitory;
+package za.ca.cput.adp3capstone.repository;
 
 import za.ca.cput.adp3capstone.domain.Itinerary;
 import za.ca.cput.adp3capstone.factory.ItineraryFactory;
-import za.ca.cput.adp3capstone.repisitory.IItineraryRepository;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -19,7 +18,7 @@ public class ItineraryRepository implements IItineraryRepository {
         itineraryFactory = new ItineraryFactory();
     }
 
-    private static IItineraryRepository getRepository() throws IOException {
+    protected static IItineraryRepository getRepository() throws IOException {
         if (repository == null) {
             repository = new ItineraryRepository();
         }
@@ -33,15 +32,11 @@ public class ItineraryRepository implements IItineraryRepository {
 
     @Override
     public Itinerary create(Itinerary itinerary) {
-        Itinerary newItinerary = itineraryFactory.createItinerary(
-                itinerary.getItineraryId(),
-                itinerary.getTravelPlanId(),
-                itinerary.getDay(),
-                itinerary.getDate(),
-                itinerary.getActivities()
-        );
-        itineraryHashMap.put(newItinerary.getItineraryId(), newItinerary);
-        return newItinerary;
+        if (itinerary == null) {
+            return null;
+        }
+        itineraryHashMap.put(itinerary.getItineraryId(), itinerary);
+        return itinerary;
     }
 
     @Override
