@@ -2,7 +2,7 @@
 Ethan Le Roux 222622172 (Team Leader)  https://github.com/adp3capstone/packandgo  
 Sibahle Josline Anita Lottering 222141395 https://github.com/SJALottering/packandgo  
 Brezano Liebenberg 230463886 https://github.com/Zano187/packandgo  
-Hope Kgomokaboya 222152672 https://github.com/miss-puse/packandgo  
+Hope Seja Kgomokaboya 222152672 https://github.com/miss-puse/packandgo  
 Luyanda Mbalenhle Makhanya 222788291 https://github.com/LuyandaMbalenhle/packandgo  
 
 UML Link:
