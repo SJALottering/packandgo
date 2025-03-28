@@ -1,6 +1,9 @@
 package za.ca.cput.adp3capstone.domain;
 
-// za.ca.cput.adp3capstone.domain.User Entity using Builder Pattern
+//UserFactory class
+//Author: Anita Lottering 222141395
+//Date: 28 March 2025
+
 public class User {
     private final String id;
     private final String name;
