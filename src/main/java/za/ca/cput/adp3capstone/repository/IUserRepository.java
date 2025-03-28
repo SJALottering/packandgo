@@ -1,4 +1,7 @@
 package za.ca.cput.adp3capstone.repository;
+//IUserRepository class
+//Author: Anita Lottering 222141395
+//Date: 28 March 2025
 
 import za.ca.cput.adp3capstone.domain.User;
 
