@@ -1,4 +1,4 @@
-package za.ca.cput.adp3capstone.repisitory;
+package za.ca.cput.adp3capstone.repository;
 /* Employee.java
 Flight Repository test class
 Author: Ethan Le Roux (222622172)
@@ -8,7 +8,6 @@ import org.junit.jupiter.api.Test;
 import za.ca.cput.adp3capstone.domain.Flight;
 import za.ca.cput.adp3capstone.factory.FlightFactory;
 
-import java.io.IOException;
 import java.util.HashMap;
 
 import static org.junit.jupiter.api.Assertions.*;
