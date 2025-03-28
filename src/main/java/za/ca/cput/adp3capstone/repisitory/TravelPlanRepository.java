@@ -10,15 +10,15 @@ import java.util.HashMap;
 
 public class TravelPlanRepository implements ITravelPlanRepository{
 
-    private TravelPlanFactory travelPlanFactory;
+    //private TravelPlanFactory travelPlanFactory;
     public static ITravelPlanRepository repository = null;
     private HashMap<String ,TravelPlan> travelPlanHashMap;
 
-//    private TravelPlanRepository() throws IOException{
-//        travelPlanHashMap = new HashMap<TravelPlan, String>();
-//        repository = getRepository();
-//        travelPlanFactory = new TravelPlanFactory();
-//    }
+    private TravelPlanRepository(){
+        travelPlanHashMap = new HashMap<String, TravelPlan>();
+        //repository = getRepository();
+        //travelPlanFactory = new TravelPlanFactory();
+    }
 
     private static ITravelPlanRepository getRepository(){
         if(repository == null) {
@@ -28,8 +28,8 @@ public class TravelPlanRepository implements ITravelPlanRepository{
     }
 
     @Override
-    public TravelPlan get(String s) {
-        return null;
+    public TravelPlan get(String travelPlanId) {
+        return travelPlanHashMap.get(travelPlanId);
     }
 
     @Override
