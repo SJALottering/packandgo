@@ -7,7 +7,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import za.ca.cput.adp3capstone.domain.ItineraryDayActivity;
 
-import java.time.LocalDate;
 import java.time.LocalTime;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -17,7 +16,7 @@ class ItineraryActivityFactoryTest {
 
     @BeforeEach
     void setUp() {
-        activity = ItineraryActivityFactory.createItineraryDayActivity(
+        activity = ItineraryActivityDayFactory.createItineraryDayActivity(
                 2, 1, "Zoo day", "Go to the zoo to see the wildlife",
                 LocalTime.of(8, 30), LocalTime.of(12, 0), 200.00
         );
