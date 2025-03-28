@@ -1,4 +1,4 @@
-package za.ca.cput.adp3capstone.repisitory;
+package za.ca.cput.adp3capstone.repository;
 
 import za.ca.cput.adp3capstone.domain.User;
 
@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Optional;
 
 // Repository Implementation
-    public class UserRepository implements za.ca.cput.adp3capstone.repisitory.IUserRepository {
+    public class UserRepository implements IUserRepository {
         private final Map<String, User> userDatabase = new HashMap<>();
     private User user;
     private String id;
